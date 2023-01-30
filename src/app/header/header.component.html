@@ -1,9 +1,35 @@
-<div class="container">
-  <div class="heading-container">
-    <h1 class="heading">Recipes.com</h1>
+<nav class="container">
+  <div class="navbar-heading--container">
+    <a href="#" class="heading">Recipes.com</a>
+    <div class="link-container">
+      <a href="#" class="link">Recipes</a>
+      <a href="#" class="link">Shopping List</a>
+    </div>
   </div>
-  <div class="link-container">
-    <a href="" class="link">Shopping List</a>
-    <a href="" class="link">Recipe Book</a>
+  <div class="dropdown-container">
+    <div
+      (click)="isDroppedDown = !isDroppedDown"
+      [ngClass]="{ dropdownSlow: isDroppedDown === true }"
+      class="dropdown"
+    >
+      Manage
+
+      <a
+        href="#"
+        (click)="onListItemClicked($event)"
+        *ngIf="isDroppedDown === true"
+        class="list-item"
+      >
+        Save Data
+      </a>
+      <a
+        href="#"
+        (click)="onListItemClicked($event)"
+        *ngIf="isDroppedDown === true"
+        class="list-item"
+      >
+        Fetch Data
+      </a>
+    </div>
   </div>
-</div>
+</nav>
