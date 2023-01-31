@@ -1,35 +1,24 @@
-<nav class="container">
-  <div class="navbar-heading--container">
-    <a href="#" class="heading">Recipes.com</a>
-    <div class="link-container">
-      <a href="#" class="link">Recipes</a>
-      <a href="#" class="link">Shopping List</a>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recipe Book</a>
     </div>
-  </div>
-  <div class="dropdown-container">
-    <div
-      (click)="isDroppedDown = !isDroppedDown"
-      [ngClass]="{ dropdownSlow: isDroppedDown === true }"
-      class="dropdown"
-    >
-      Manage
-
-      <a
-        href="#"
-        (click)="onListItemClicked($event)"
-        *ngIf="isDroppedDown === true"
-        class="list-item"
-      >
-        Save Data
-      </a>
-      <a
-        href="#"
-        (click)="onListItemClicked($event)"
-        *ngIf="isDroppedDown === true"
-        class="list-item"
-      >
-        Fetch Data
-      </a>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" role="button"
+            >Manage <span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Save Data</a></li>
+            <li><a href="#">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

@@ -9,9 +9,19 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent {
   recipes: Recipe[] = [
     new Recipe(
-      'A test recipe',
-      'test description',
-      'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.loveandlemons.com%2Fpantry-recipes%2F&psig=AOvVaw0suIY_uIAi3Ap_4kq6YHWt&ust=1675207453293000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCKikp5u48PwCFQAAAAAdAAAAABAE'
+      'tomato soup',
+      'yummy yummy mater soup',
+      'https://cdn.loveandlemons.com/wp-content/uploads/2020/03/pantry-recipes-2.jpg'
+    ),
+    new Recipe(
+      'beef soup',
+      'yummy yummy beef soup',
+      'https://www.recipetineats.com/wp-content/uploads/2019/05/Vegetable-Beef-Soup_3.jpg'
+    ),
+    new Recipe(
+      'au gratin',
+      'yummy yummy au gratin',
+      'https://www.recipetineats.com/wp-content/uploads/2014/12/Potatoes-au-gratin_2.jpg'
     ),
   ];
 }
